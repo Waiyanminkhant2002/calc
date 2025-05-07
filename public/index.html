@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WeChat Style Group Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Login Page -->
+  <div class="login-page" id="login-page">
+    <div class="login-box">
+      <h2>Login</h2>
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+      </select>
+      <select id="username-select">
+        <option value="">Select User</option>
+        <option value="user1">user1</option>
+        <option value="user2">user2</option>
+        <option value="user3">user3</option>
+        <option value="user4">user4</option>
+        <option value="user5">user5</option>
+        <option value="user6">user6</option>
+        <option value="user7">user7</option>
+        <option value="user8">user8</option>
+        <option value="user9">user9</option>
+        <option value="user10">user10</option>
+      </select>
+
+      <select id="group-select">
+        <option value="">Select Group</option>
+        <option value="group1">ST01</option>
+        <option value="group2">Group 2</option>
+        <option value="group3">Group 3</option>
+        <option value="group4">Group 4</option>
+        <option value="group5">Group 5</option>
+        <option value="group6">Group 6</option>
+        <option value="group7">Group 7</option>
+        <option value="group8">Group 8</option>
+        <option value="group9">Group 9</option>
+        <option value="group10">Group 10</option>
+      </select>
+
+      <input type="password" id="password-input" value="password" placeholder="Enter password">
+      <button id="login-btn">Login</button>
+    </div>
+
+    <div class="welcome-section">
+      <h2>Hello Friend!</h2>
+    </div>
+  </div>
+
+  <!-- Chat Page -->
+  <div class="chat-page" id="chat-page" style="display: none;">
+    <div class="top-bar">
+      <span id="current-user">Current User: </span>
+      <span id="current-group">Current Group: </span>
+      <select id="switch-group-select">
+        <option value="">Switch Group</option>
+        <option value="group1">St01</option>
+        <option value="group2">Group 2</option>
+        <option value="group3">Group 3</option>
+        <option value="group4">Group 4</option>
+        <option value="group5">Group 5</option>
+        <option value="group6">Group 6</option>
+        <option value="group7">Group 7</option>
+        <option value="group8">Group 8</option>
+        <option value="group9">Group 9</option>
+        <option value="group10">Group 10</option>
+      </select>
+      <button id="leave-btn">Leave</button>
+      <button id="end-btn">End Group</button>
+    </div>
+
+    <div class="total-display" id="total-display">Group Total: 0</div>
+
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search Work Order...">
+    </div>
+
+    <div class="messages" id="chat-body"></div>
+
+    <div class="input-bar">
+      <input type="text" id="chat-input" placeholder="WO123: 100+50">
+      <div class="input-actions">
+        <button id="export-btn">Export</button>
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjs@11.11.0/lib/browser/math.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
